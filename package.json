@@ -1,0 +1,37 @@
+{
+  "name": "@npm/nsq-registry-event-client",
+  "version": "1.0.1",
+  "description": "read/write registry events to nsq in a standardized format",
+  "main": "./lib/client",
+  "scripts": {
+    "pretest": "standard",
+    "test:sleep": "nyc mocha --timeout=5000 ./test/sleepy-client.js",
+    "test:nosleep": "nyc mocha --timeout=5000 --recursive ./test/no-sleep-client.js",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/nsq-registry-event-client.git"
+  },
+  "keywords": [
+    "nsq",
+    "npnm"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/nsq-registry-event-client/issues"
+  },
+  "homepage": "https://github.com/npm/nsq-registry-event-client#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.2-candidate.4",
+    "standard": "^10.0.2",
+    "uuid": "^3.0.1"
+  },
+  "dependencies": {
+    "aproba": "^1.1.1",
+    "nsqjs": "^0.8.4"
+  }
+}
